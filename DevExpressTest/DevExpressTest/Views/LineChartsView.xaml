@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:dxc="clr-namespace:DevExpress.XamarinForms.Charts;assembly=DevExpress.XamarinForms.Charts"
+             x:Class="DevExpressTest.Views.LineChartsView">
+    <dxc:ChartView x:Name="chart">
+        <dxc:ChartView.AxisX>
+            <dxc:DateTimeAxisX MeasureUnit="Year" 
+                           GridAlignment="Year" 
+                           GridSpacing="1"/>
+        </dxc:ChartView.AxisX>
+
+        <dxc:ChartView.AxisY>
+            <dxc:NumericAxisY>
+                <dxc:NumericAxisY.Title>
+                    <dxc:AxisTitle Text="Trillions of US$">
+                        <dxc:AxisTitle.Style>
+                            <dxc:TitleStyle>
+                                <dxc:TitleStyle.TextStyle>
+                                    <dxc:TextStyle Size="16"/>
+                                </dxc:TitleStyle.TextStyle>
+                            </dxc:TitleStyle>
+                        </dxc:AxisTitle.Style>
+                    </dxc:AxisTitle>
+                </dxc:NumericAxisY.Title>
+                <dxc:NumericAxisY.Label>
+                    <dxc:AxisLabel TextFormat="#.#" Position="Inside"/>
+                </dxc:NumericAxisY.Label>
+            </dxc:NumericAxisY>
+        </dxc:ChartView.AxisY>
+
+        <dxc:ChartView.Legend>
+            <dxc:Legend VerticalPosition="TopOutside" 
+                    HorizontalPosition="Center" 
+                    Orientation="LeftToRight"/>
+        </dxc:ChartView.Legend>
+    </dxc:ChartView>
+</ContentPage>
